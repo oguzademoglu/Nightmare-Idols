@@ -990,6 +990,9 @@ MonoBehaviour:
   enemyPool: {fileID: 1640888153}
   enemies:
   - {fileID: 11400000, guid: ca8dd04afd37e324a8f603b201ab493a, type: 2}
+  - {fileID: 11400000, guid: 66763dade51d5a94d8be21a7c81d473d, type: 2}
+  - {fileID: 11400000, guid: a45367a5e1b4fe043b6fdf7d344f3b52, type: 2}
+  - {fileID: 11400000, guid: 1681e7f5827b0e84db64f5cf9337c0ef, type: 2}
   spawnInterval: 1
   spawnRadius: 10
   despawnDistance: 30
@@ -1648,8 +1651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.2673, y: 18}
-  m_SizeDelta: {x: 939.4182, y: 48.102}
+  m_AnchoredPosition: {x: 0.4144, y: 18}
+  m_SizeDelta: {x: 986.4354, y: 48.102}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1522207178
 GameObject:
@@ -1922,6 +1925,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8252f0da8358e241a4fde457966a060, type: 2}
   - {fileID: 11400000, guid: 9e115f6fb296f13409232b09bbe7a975, type: 2}
   - {fileID: 11400000, guid: ca8dd04afd37e324a8f603b201ab493a, type: 2}
+  - {fileID: 11400000, guid: 66763dade51d5a94d8be21a7c81d473d, type: 2}
+  - {fileID: 11400000, guid: 1681e7f5827b0e84db64f5cf9337c0ef, type: 2}
+  - {fileID: 11400000, guid: a45367a5e1b4fe043b6fdf7d344f3b52, type: 2}
   initialPoolSize: 10
 --- !u!4 &1640888154
 Transform:

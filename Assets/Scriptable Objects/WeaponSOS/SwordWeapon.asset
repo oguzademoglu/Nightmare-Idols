@@ -18,7 +18,7 @@ MonoBehaviour:
   weaponType: 3
   weaponDamage: 12
   weaponLevel: 1
-  attackCooldown: 2
+  attackCooldown: 0.8
   projectileSpeed: 2
   range: 2
   spreadCount: 0

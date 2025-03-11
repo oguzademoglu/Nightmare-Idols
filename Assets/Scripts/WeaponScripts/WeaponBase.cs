@@ -1,37 +1,36 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class WeaponBase : MonoBehaviour
 {
     public WeaponSO weaponData;
     Transform player;
-    float cooldownTimer = 0f;
     float rotationSpeed = 100f;
 
     public float orbitRadius = 1.5f;
 
+    [Obsolete]
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        StartCoroutine(AutoAttack());
+    }
+
+    [Obsolete]
+    IEnumerator AutoAttack()
+    {
+        while (true)
+        {
+            Attack();
+            yield return new WaitForSeconds(weaponData.attackCooldown);
+        }
     }
 
     [Obsolete]
     void Update()
     {
-        if (cooldownTimer <= 0f)
-        {
-            Attack();
-            cooldownTimer = weaponData.attackCooldown;
-        }
-        else
-        {
-            cooldownTimer -= Time.deltaTime;
-        }
-
-        if (weaponData.weaponType == WeaponType.Rotating)
-        {
-            RotateAroundPlayer();
-        }
+        if (weaponData.weaponType == WeaponType.Rotating) RotateAroundPlayer();
     }
 
 
@@ -112,6 +111,24 @@ public class WeaponBase : MonoBehaviour
             }
         }
         // Debug.Log($"{weaponData.weaponName} menzilli saldırı yaptı!");
+
+        // if (weaponData.weaponPrefab)
+        // {
+        //     Vector2 fireDirection = player.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+
+        //     for (int i = 0; i < weaponData.spreadCount; i++)
+        //     {
+        //         GameObject projectile = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
+        //         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        //         if (rb)
+        //         {
+        //             float spreadAngle = (1 - weaponData.spreadCount / 2) * 10f; //yayılma açısı
+        //             Vector2 direction = Quaternion.Euler(0, 0, spreadAngle) * fireDirection;
+        //             rb.velocity = direction * weaponData.projectileSpeed;
+        //             projectile.GetComponent<Bullet>().SetPierceCount(weaponData.pierceCount);
+        //         }
+        //     }
+        // }
     }
 
     private void MeleeAttack()
