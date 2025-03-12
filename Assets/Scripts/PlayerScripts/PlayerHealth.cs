@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -20,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         // Debug.Log(currentHealth);
-        if (currentHealth <= 0) Debug.Log("Player is Dead");
+        if (currentHealth <= 0) SceneManager.LoadScene("GameOverScene");
         healthSlider.value = currentHealth;
     }
 
