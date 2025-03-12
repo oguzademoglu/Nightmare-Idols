@@ -9,16 +9,11 @@ public class Player : MonoBehaviour
     WeaponSO defaultWeapon;
 
     bool isRunning;
-    // float attackTimer = 0f;
     Vector2 moveInput;
     Rigidbody2D playerRb;
     Animator animator;
     SpriteRenderer spriteRenderer;
     PlayerWeaponManager playerWeaponManager;
-
-    // public List<WeaponBase> equippedWeapons = new();
-    // const int maxWeapons = 6;
-
 
     void Awake()
     {
@@ -32,8 +27,6 @@ public class Player : MonoBehaviour
     {
         moveSpeed = characterData.speed;
         defaultWeapon = characterData.defaultWeapon;
-        PlayerHealth playerHealth = GetComponent<PlayerHealth>();
-        if (playerHealth != null) playerHealth.SetMaxHealth(characterData.health);
         playerWeaponManager.EquipWeapon(defaultWeapon);
     }
 
@@ -41,8 +34,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         MovePlayer();
-        // Debug.Log(moveSpeed);
-        // AnimatorControllers();
+        AnimatorControllers();
 
     }
 
@@ -86,7 +78,6 @@ public class Player : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        Debug.Log(moveInput);
     }
 
     public void EquipNewWeapon(WeaponSO newWeapon)
