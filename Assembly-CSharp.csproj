@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\WeaponScripts\HammerWeapon.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
-    <Compile Include="Assets\Scripts\StartScreenScripts\CharacterSelector.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\BoomerangHammerWeapon.cs" />
     <Compile Include="Assets\Downloaded Assets\Character\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Scriptable Objects\EnemySOS\EnemySO.cs" />
@@ -83,6 +82,7 @@
     <Compile Include="Assets\Downloaded Assets\Character\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Scripts\UI\LevelUpUI.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\StartScreenScripts\CharacterSelectorManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerWeaponManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Player.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
@@ -90,7 +90,9 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\UI\XPUIManager.cs" />
+    <Compile Include="Assets\Scripts\StartScreenScripts\StartScreenManager.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Enemy.cs" />
     <Compile Include="Assets\Scriptable Objects\WeaponSOS\WeaponSO.cs" />
   </ItemGroup>

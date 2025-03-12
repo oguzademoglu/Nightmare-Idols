@@ -37,17 +37,13 @@ public class Player : MonoBehaviour
         playerWeaponManager.EquipWeapon(defaultWeapon);
     }
 
-    // void Start()
-    // {
-    //     if (defaultWeapon != null) playerWeaponManager.EquipWeapon(defaultWeapon);
-    //     playerWeaponManager.EquipWeapon(secondWeapon);
-    // }
     [Obsolete]
-    void Update()
+    void FixedUpdate()
     {
         MovePlayer();
-        AnimatorControllers();
-        // HandleWeapons();
+        // Debug.Log(moveSpeed);
+        // AnimatorControllers();
+
     }
 
     Transform FindNearestEnemy()
@@ -79,27 +75,6 @@ public class Player : MonoBehaviour
         else if (movement.x < 0) spriteRenderer.flipX = true;
     }
 
-    // void HandleWeapons()
-    // {
-    //     foreach (var weapon in equippedWeapons)
-    //     {
-    //         if (weapon != null) weapon.enabled = true;
-    //     }
-    // }
-
-    // public void AddWeapon(WeaponBase newWeapon)
-    // {
-    //     if (equippedWeapons.Count < maxWeapons)
-    //     {
-    //         equippedWeapons.Add(newWeapon);
-    //         Debug.Log($"{newWeapon.weaponData.weaponName} envantere eklendi!");
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("Maksimum silah kapasitesine ulaşıldı!");
-    //     }
-    // }
-
 
     public void AnimatorControllers()
     {
@@ -111,6 +86,7 @@ public class Player : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        Debug.Log(moveInput);
     }
 
     public void EquipNewWeapon(WeaponSO newWeapon)

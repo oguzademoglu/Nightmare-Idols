@@ -12,16 +12,20 @@ public class XPUIManager : MonoBehaviour
 
     void Start()
     {
+        Invoke(nameof(FindPlayerXP), 0.5f);
+    }
+
+    void FindPlayerXP()
+    {
         playerXP = FindAnyObjectByType<PlayerXP>();
         playerXP.LevelUpEvent += UpdateUI;
 
         UpdateUI(playerXP.level);
     }
 
-
     void Update()
     {
-        xpBar.value = playerXP.currentXP / playerXP.xpToNextLevel;
+        if (playerXP != null) xpBar.value = playerXP.currentXP / playerXP.xpToNextLevel;
     }
 
 

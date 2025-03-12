@@ -325,6 +325,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &143363969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 143363971}
+  - component: {fileID: 143363970}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &143363970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143363969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bde5547c18898e48accaf71d8937188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableCharacters:
+  - {fileID: 11400000, guid: ad4f32c3848704b49aa83246ac86a810, type: 2}
+  spawnPoint: {fileID: 143363971}
+--- !u!4 &143363971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143363969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &221585826
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,10 +970,7 @@ MonoBehaviour:
   enemyPool: {fileID: 1640888153}
   enemies:
   - {fileID: 11400000, guid: ca8dd04afd37e324a8f603b201ab493a, type: 2}
-  - {fileID: 11400000, guid: 66763dade51d5a94d8be21a7c81d473d, type: 2}
-  - {fileID: 11400000, guid: a45367a5e1b4fe043b6fdf7d344f3b52, type: 2}
-  - {fileID: 11400000, guid: 1681e7f5827b0e84db64f5cf9337c0ef, type: 2}
-  spawnInterval: 1
+  spawnInterval: 2
   spawnRadius: 10
   despawnDistance: 30
 --- !u!4 &940114579
@@ -1569,7 +1613,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: f8252f0da8358e241a4fde457966a060, type: 2}
   - {fileID: 11400000, guid: ca8dd04afd37e324a8f603b201ab493a, type: 2}
-  spawnInterval: 0.4
+  spawnInterval: 0.8
   spawnRadius: 10
   despawnDistance: 30
 --- !u!4 &1747142504
@@ -2125,15 +2169,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6392175232306934155, guid: b40a7537ff03a674da6cf77b4b6a90e4,
+    - target: {fileID: 3228997575227987314, guid: b40a7537ff03a674da6cf77b4b6a90e4,
         type: 3}
-      propertyPath: m_AnchorMax.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6392175232306934155, guid: b40a7537ff03a674da6cf77b4b6a90e4,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392175232306934155, guid: b40a7537ff03a674da6cf77b4b6a90e4,
+        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6974418579550042020, guid: b40a7537ff03a674da6cf77b4b6a90e4,
         type: 3}
@@ -2167,3 +2216,4 @@ SceneRoots:
   - {fileID: 1640888154}
   - {fileID: 136327769}
   - {fileID: 2079485560}
+  - {fileID: 143363971}
