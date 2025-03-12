@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,6 +31,14 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         // Debug.Log(currentHealth);
         if (currentHealth <= 0) Debug.Log("Player is Dead");
+        healthSlider.value = currentHealth;
+    }
+
+    internal void SetMaxHealth(float newMaxHealth)
+    {
+        maxHealth = newMaxHealth;
+        currentHealth = maxHealth;
+        healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
     }
 }

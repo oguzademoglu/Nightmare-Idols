@@ -5,12 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
-    // [SerializeField] float attackCoolDown = 1f;
-    // [SerializeField] GameObject bulletPrefab;
-    // [SerializeField] Transform firePoint;
-    [SerializeField] WeaponSO defaultWeapon;
-    [SerializeField] WeaponSO secondWeapon;
+    float moveSpeed;
+    WeaponSO defaultWeapon;
 
     bool isRunning;
     // float attackTimer = 0f;
@@ -32,11 +28,20 @@ public class Player : MonoBehaviour
         playerWeaponManager = GetComponent<PlayerWeaponManager>();
     }
 
-    void Start()
+    public void InitializeCharacter(CharacterSO characterData)
     {
-        if (defaultWeapon != null) playerWeaponManager.EquipWeapon(defaultWeapon);
-        playerWeaponManager.EquipWeapon(secondWeapon);
+        moveSpeed = characterData.speed;
+        defaultWeapon = characterData.defaultWeapon;
+        PlayerHealth playerHealth = GetComponent<PlayerHealth>();
+        if (playerHealth != null) playerHealth.SetMaxHealth(characterData.health);
+        playerWeaponManager.EquipWeapon(defaultWeapon);
     }
+
+    // void Start()
+    // {
+    //     if (defaultWeapon != null) playerWeaponManager.EquipWeapon(defaultWeapon);
+    //     playerWeaponManager.EquipWeapon(secondWeapon);
+    // }
     [Obsolete]
     void Update()
     {
