@@ -55,8 +55,19 @@ public class PlayerWeaponManager : MonoBehaviour
         }
     }
 
+    public void UpgradeWeapon(WeaponSO weapon)
+    {
+        weapon.weaponLevel++;
+        weapon.weaponDamage *= 1.1f;
+    }
+
     public List<WeaponBase> GetWeapons()
     {
         return equippedWeapons;
+    }
+
+    internal List<WeaponSO> GetAwailableWeapons()
+    {
+        throw new NotImplementedException();
     }
 }
