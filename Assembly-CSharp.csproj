@@ -68,13 +68,16 @@
     <Compile Include="Assets\Scripts\WeaponScripts\HammerWeapon.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\BoomerangHammerWeapon.cs" />
     <Compile Include="Assets\Downloaded Assets\Character\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Scriptable Objects\EnemySOS\EnemySO.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\WeaponBase.cs" />
     <Compile Include="Assets\Scripts\Pools\EnemyPool.cs" />
     <Compile Include="Assets\Downloaded Assets\Character\ColorSwap\ColorSwap_HeroKnight.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\EnergyRingWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerXP.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\FireballWeapon.cs" />
     <Compile Include="Assets\Downloaded Assets\Character\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerWeaponManager.cs" />
