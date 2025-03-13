@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\WeaponScripts\HammerWeapon.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
+    <Compile Include="Assets\Scripts\WeaponScripts\FireballProjectile.cs" />
     <Compile Include="Assets\Downloaded Assets\Tileset\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Scripts\WeaponScripts\BoomerangHammerWeapon.cs" />
     <Compile Include="Assets\Downloaded Assets\Character\Demo\DestroyEvent_HeroKnight.cs" />

@@ -17,4 +17,4 @@ MonoBehaviour:
     type: 3}
   health: 100
   speed: 200
-  defaultWeapon: {fileID: 11400000, guid: c126231332ad4734889f2e4d808285d0, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 03fb38e5e8b77a74eba9fa06cb3eb0dc, type: 2}

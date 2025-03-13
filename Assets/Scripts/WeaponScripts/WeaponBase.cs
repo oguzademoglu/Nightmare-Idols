@@ -7,6 +7,7 @@ public class WeaponBase : MonoBehaviour
     public WeaponSO weaponData;
     Transform player;
     float rotationSpeed = 100f;
+    public bool canAttack = true;
 
     public float orbitRadius = 1.5f;
 
@@ -22,8 +23,12 @@ public class WeaponBase : MonoBehaviour
     {
         while (true)
         {
-            Attack();
-            yield return new WaitForSeconds(weaponData.attackCooldown);
+            if (canAttack)
+            {
+                Attack();
+                // yield return new WaitForSeconds(weaponData.attackCooldown);
+            }
+            yield return null;
         }
     }
 
