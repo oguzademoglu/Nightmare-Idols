@@ -10,8 +10,6 @@ public class PlayerXP : MonoBehaviour
     public delegate void OnLevelUp(int newLevel);
     public event OnLevelUp LevelUpEvent;
 
-    public static event Action<int> OnLevelUpEvent;
-
 
     public void GainXP(float xpAmount)
     {
@@ -26,7 +24,6 @@ public class PlayerXP : MonoBehaviour
         xpToNextLevel *= 1.2f;
 
         Debug.Log($"seviye atlandı. yeni seviye: {level}");
-        // LevelUpEvent?.Invoke(level);
-        OnLevelUpEvent?.Invoke(level);
+        LevelUpEvent?.Invoke(level);
     }
 }

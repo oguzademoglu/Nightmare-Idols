@@ -1,10 +1,13 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public CharacterSO[] availableCharacters; // Inspector'dan ekle
+    public CharacterSO[] availableCharacters;
     public Transform spawnPoint;
     // public CharacterSelectorManager characterSelectorManager;
+
+    public CinemachineCamera virtualCamera;
     void Start()
     {
         // if (characterSelectorManager != null)
@@ -36,9 +39,16 @@ public class GameManager : MonoBehaviour
                 playerScript.InitializeCharacter(character);
                 player.GetComponent<PlayerHealth>().SetMaxHealth(character.health);
                 // break;
+                if (virtualCamera != null)
+                {
+                    virtualCamera.Follow = player.transform;
+                    virtualCamera.LookAt = player.transform;
+                }
                 return;
             }
         }
+
+
         Debug.LogError("Seçilen karakter bulunamadı! Karakter listesi eksik olabilir.");
     }
 

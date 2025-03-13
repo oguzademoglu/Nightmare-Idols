@@ -357,6 +357,7 @@ MonoBehaviour:
   availableCharacters:
   - {fileID: 11400000, guid: ad4f32c3848704b49aa83246ac86a810, type: 2}
   spawnPoint: {fileID: 143363971}
+  virtualCamera: {fileID: 1167340897}
 --- !u!4 &143363971
 Transform:
   m_ObjectHideFlags: 0
