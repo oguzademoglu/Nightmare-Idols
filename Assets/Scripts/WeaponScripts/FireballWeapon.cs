@@ -7,17 +7,19 @@ public class FireballWeapon : WeaponBase
     protected override void Attack()
     {
         if (!canAttack) return;
-        Debug.Log("Fireball fired");
+        Debug.Log("Attack çalıştı");
         GameObject projectile = Instantiate(weaponData.weaponPrefab, transform.position, Quaternion.identity);
         // Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         // rb.velocity = transform.right * weaponData.projectileSpeed;
 
         if (projectile.TryGetComponent<FireballProjectile>(out var fireballProjectile))
         {
+            Debug.Log("fireball oluşturuldu");
             SpriteRenderer spriteRenderer = GetComponentInParent<SpriteRenderer>();
             float direction = spriteRenderer.flipX ? -1f : 1f;
             fireballProjectile.SetStats(weaponData.projectileSpeed, weaponData.weaponDamage, weaponData.range, weaponData.explosionRadius, direction);
         }
+        Debug.Log("Fireball fired");
         StartCoroutine(StartCoolDown());
     }
 

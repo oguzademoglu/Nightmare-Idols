@@ -6,7 +6,7 @@ public class WeaponBase : MonoBehaviour
 {
     public WeaponSO weaponData;
     Transform player;
-    float rotationSpeed = 100f;
+    float rotationSpeed = 150f;
     public bool canAttack = true;
 
     public float orbitRadius = 1.5f;
@@ -14,6 +14,7 @@ public class WeaponBase : MonoBehaviour
     [Obsolete]
     void Start()
     {
+        Debug.Log("Weapon base çalıştı");
         player = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(AutoAttack());
     }
@@ -25,6 +26,7 @@ public class WeaponBase : MonoBehaviour
         {
             if (canAttack)
             {
+                Debug.Log("Can attack true");
                 Attack();
                 // yield return new WaitForSeconds(weaponData.attackCooldown);
             }

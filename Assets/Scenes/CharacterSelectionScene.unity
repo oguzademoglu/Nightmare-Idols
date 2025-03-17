@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 735036328}
   - component: {fileID: 735036327}
   - component: {fileID: 735036326}
+  - component: {fileID: 735036331}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -497,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   availableCharacters:
   - {fileID: 11400000, guid: ad4f32c3848704b49aa83246ac86a810, type: 2}
+  - {fileID: 11400000, guid: dd7172565cbc48f40b37ca2b50fbf287, type: 2}
   spawnPoint: {fileID: 1689386309}
   characterButtonPrefab: {fileID: 1767487684}
   buttonParent: {fileID: 1716943129}
@@ -587,6 +589,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!50 &735036331
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735036325}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &860964412
 GameObject:
   m_ObjectHideFlags: 0

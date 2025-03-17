@@ -24,7 +24,7 @@ public class FireballProjectile : MonoBehaviour
 
     void Update()
     {
-        transform.position += direction * speed * Time.deltaTime * transform.right;
+        transform.position += new Vector3(direction * speed * Time.deltaTime, 0, 0);
         if (Vector3.Distance(startPosition, transform.position) >= range) Explode();
     }
 

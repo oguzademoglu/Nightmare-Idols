@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireballWeapon
   m_EditorClassIdentifier: 
   weaponName: Fireball
-  weaponPrefab: {fileID: 8892027332290993773, guid: e76b85e2aedd91d48b604d5882e31516,
+  weaponPrefab: {fileID: 6395412643346406519, guid: 7015c56c9f7e8c843a4e17cad320527a,
     type: 3}
   weaponType: 1
   weaponDamage: 20

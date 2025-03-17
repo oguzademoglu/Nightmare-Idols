@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,7 +22,9 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         // Debug.Log(currentHealth);
-        if (currentHealth <= 0) SceneManager.LoadScene("GameOverScene");
+        // if (currentHealth <= 0) SceneManager.LoadScene("GameOverScene");
+        if (currentHealth <= 0)
+            StartCoroutine(LoadGameOverSceneAfterDelay(3f));
         healthSlider.value = currentHealth;
     }
 
@@ -31,5 +34,11 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
+    }
+
+    IEnumerator LoadGameOverSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("GameOverScene");
     }
 }
